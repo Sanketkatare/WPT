@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data list</title>
+</head>
+<body>
+    <form action="">
+        <label for="browser">Choose your browser from the list:</label>
+        <input list="browsers" id="browser" name="browser">
+        <datalist id="browsers"><!--datalist tag is used for getting the dropdown as well other than the option can-->
+            <option value="Edge">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <button onclick="datalistcall()" type="button">click here</button>
+    </form>
+    <p id="demo"></p>
+    <script>
+        function datalistcall() {
+            var x = document.getElementById("browser").value;
+            document.getElementById("demo").innerHTML = "You selected: " + x;
+        }    
+    </script>
+    </body>
+</html>

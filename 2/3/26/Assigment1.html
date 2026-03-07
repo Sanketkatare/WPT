@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Page 1</h1>
+    <div style="font-family: 'Courier New', Courier, monospace; font-size: 20px; font-style: italic; font-weight: 6px; text-decoration: overline;">
+        <pre>* I got new method name is replace("parameter that you want to replace ","parameter that replace with");
+		*one more method is matches()->str.matches(patt); it will compare the two string and give boolean value means true or false
+		*
+		
+		
+		
+			=====Exception Handling =======\
+			*both error and exception is throwable 
+							Thrwoable
+							     |
+					--------------------------
+					|                         |
+				Exception			    	Error
+				    |                         |
+				-------------           	JVM,AssertionError
+				|	         |
+			Unchecked 		checked
+			
+			Checked Exception-> when we compiled these checked will check
+			this exception we have to look into it we cannot go without handling it
+			it occures due to long inputs means like arithmatic operations(ArithmeticException , ArrrayIndexOutOfBoundryException)
+				
+			Handle the Exception
+			public static void abc() throws IOException{
+				FileInputStream x = new fileInputStram("users/md/downloads/abc.txt");
+				}
+				
+				2nd way -> using try catch 
+			try catch is use to catch the error which is generate if it error occure inside of the catch code will run
+			question -> what is error occure in catch block 
+						->program will terminate unless we have another try catch block inside the catch block
+						
+			finlly Block
+			the finally block gets executed after successful run of the try block or after one of the catch blicks handled an exveption
+			
+			
+		_---------------Time and Date ---------------------
+		sysout(LocalDate.now()); ----|
+		sysout(LocalTime.now());-----| this are static methods
+		
+		
+		localDate d1 = LocalDate.now().plusMonths(3);
+		LocalDate d2 = LocalDate.now().minusMonths(3);
+		they will give you the daate after the 3 months or before the 3 months
+		
+		
+		LocalTime t1 = LocalTime.now().plusHours(1); it will give you the time 1 hour back from now
+		
+		Period p = Period.between(d1, LocalDate.now()); it will give you the difference between 2 days
+	</pre>
+    </div>
+    
+</body>
+</html>
