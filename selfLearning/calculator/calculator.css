@@ -1,0 +1,27 @@
+#console {
+    width: 400px;
+    height: 50px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    margin-left:80px ;
+    padding: 5px;
+    font-size: 20px;
+    background-color: lightgray;
+}
+button {
+    width: 90px;
+    height: 40px;
+    margin: 5px;
+    font-size: 18px;
+}
+#buttons {
+    margin-left: 80px;
+    display:inline-block
+
+}
+#cal{
+    margin: 20px;
+    width: 700px;
+    background-color: lightblue;
+    padding-right: 500px;
+}   
