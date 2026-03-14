@@ -9,24 +9,43 @@
     <div style="border-radius: 2px; background-color: slategray; display: flexbox; align-content: center;">
         <input type="text" id="i1" class="" name="first_name" placeholder="First Name"> : First Name</input>
         <input type="text" name="Last_name" id="i2" placeholder="Last Name"> : Last Name
-        <input type="date" style="display: block;">
+        <input type="date" id="date" style="display: block;">
         
     </div>
-    <button onclick="">submit</button>
+
+    <button onclick="generate()">submit</button>
+    <p id="print"></p>
     <script>
         function generate(){
-            let userName = "";
-            First_Name = document.getElementById("i1").value;
-            Last_Name = document.getElementById("i1").value;
+            let userName="";
+            let First_Name = document.getElementById("i1").value;
+            let Last_Name = document.getElementById("i2").value;
+            let len = Last_Name.length;
+            console.log(len);
+            function date1()
+            {
+                let bd = document.getElementById("date").value;
+                let td  = new Date();
+                let age = td.getFullYear()- new Date(bd).getFullYear();
+               return age;
+                
+            }
+            // let indices = [0,1];
+            // userName += indices.map(i => First_Name[i]);
             for(a=0;a<2;a++)
             {
                 userName += First_Name[a];
+               
             }
-            for(let a=0;a<2;a++)
-            {
-                userName += Last_Name[a];
-            }
+            userName += date1();
+            for(let b=1;b<=2;b++)
+                {
+                    userName += Last_Name[len-b];
+                }
+            
+            document.getElementById("print").innerHTML = userName;
         }
+        
     </script>
 </body>
 </html>
