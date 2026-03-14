@@ -1,0 +1,59 @@
+<!-- 3) https://jsonplaceholder.typicode.com/todos
+using above api create post mehod in ajax concept -- accept data from user for post 
+--------------------------------
+JQuery
+1)  create application for $().load()
+   display content of another html page in current page  -->
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Enter data</h2>
+    <label for="Utitle">Title</label>
+    <input id="Utitle" type="text" name="title"><br>
+
+    <label for="UId">UserId</label>
+    <input id="UId" type="number" name="UserID"><br>
+
+    <label for="Ubody">Body</label>
+    <input id="Ubody" type="text" name="body"><br>
+
+    <button type="button" onclick="sendRecords()">Submit</button>
+    <div id="example"></div>
+    <div id="display"></div>
+    
+    <script>
+        function sendRecords(){
+            var zhttp =  new XMLHttpRequest();
+            const parameter ={
+                title : document.querySelector('#Utitle').value,
+                user : document.querySelector('#UId').value,
+                body : document.querySelector('#Ubody').value
+            }
+
+            zhttp.onreadystatechange = function(){
+                if(this.readystate == 4 && this.status == 201){
+                    document.getElementById("example").innerHTML = this.responseText;
+                    console.log("Data Posted Successfully")
+                }
+                console.log("Error found")
+            };
+            zhttp.open("POST", "https://jsonplaceholder.typicode.com/todos", true);
+            zhttp.setRequestHeader('Content-type', 'application/json')
+            zhttp.send(JSON.stringify(parameter));
+
+            $(function(){
+                $("#display").load("destructor.html");
+            })
+
+            
+        }
+    </script>
+</body>
+</html>

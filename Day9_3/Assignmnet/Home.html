@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     <script src="prototype12.js"></script>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
 </head>
 <body>
     Welcom to home page
@@ -12,6 +13,21 @@
     StudentID <input type="number" name="sid">
     Student Name <input type="text" name="sname">
     Student grade <input type="number" name="sgrade">
-    <input type="submit">
+    <input type="submit" onclick="show()">
+
+    <script>
+        let id1 = $(".sid").val;
+        let name1 = $(".sname").val;
+        let grade1 =$("sgrade").val;
+        function show(){
+            let data = {
+                id1 : id1,
+                name1 : name1,
+                grade1 : grade1
+            }
+        const a = JSON.stringify(data);
+        console.log(a);
+        }
+    </script>
 </body>
 </html>

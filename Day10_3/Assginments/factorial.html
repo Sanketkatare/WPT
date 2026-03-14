@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial </title>
+</head>
+<body>
+    <input type="number" id="number1">give some number to find out the factorial
+    <p id="p1">The anser is :</p>
+    <button onclick="factorial()">find</button>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+        // let a=$("#number1");
+        
+        console.log(a);
+
+        function factorial(){
+            let a = $("#number1").val();
+            let result=1;
+            for(i=1;i<=a;i++)
+        {
+           result = result*i;
+            
+        }
+        console.log(result);
+        $("#p1").html(result);
+        }
+    </script>
+</body>
+</html>

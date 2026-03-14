@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Operations</title>
+
+<!-- <style>
+body{
+    Arial;
+    30px;
+}
+
+input{
+    5px;
+    padding:5px;
+}
+
+button{
+    5px;
+    padding:6px;
+}
+</style> -->
+
+</head>
+
+<body>
+
+<h2>Array Operations</h2>
+
+<label>Enter Value:</label>
+<input type="text" id="value">
+
+<br><br>
+
+<button onclick="checkValue()">Check Value</button>
+<p id="result"></p>
+
+<hr>
+
+<button onclick="addToEnd()">Add To End</button>
+
+<hr>
+
+<label>Index:</label>
+<input type="number" id="insertIndex">
+
+<button onclick="insertAtIndex()">Insert At Index</button>
+
+<hr>
+
+<label>Remove Index:</label>
+<input type="number" id="removeIndex">
+
+<button onclick="removeAtIndex()">Remove Element</button>
+
+<hr>
+
+<p id="finalArray"></p>
+
+
+<script>
+
+let arr = ["apple","banana"];
+
+
+function checkValue(){
+
+    let val = document.getElementById("value").value;
+
+    if(arr.includes(val))
+        document.getElementById("result").innerHTML = "Found";
+    else
+        document.getElementById("result").innerHTML = "Not Found";
+
+}
+
+
+function addToEnd(){
+
+    let val = document.getElementById("value").value;
+
+    arr.push(val);
+
+    document.getElementById("finalArray").innerHTML = "Array: " + arr;
+
+}
+
+
+function insertAtIndex(){
+
+    let val = document.getElementById("value").value;
+
+    let index = document.getElementById("insertIndex").value;
+
+    arr.splice(index,0,val);
+
+    document.getElementById("finalArray").innerHTML = "Array: " + arr;
+
+}
+
+
+function removeAtIndex(){
+
+    let index = document.getElementById("removeIndex").value;
+
+    arr.splice(index,1);
+
+    document.getElementById("finalArray").innerHTML = "Array: " + arr;
+
+}
+
+</script>
+
+</body>
+</html>

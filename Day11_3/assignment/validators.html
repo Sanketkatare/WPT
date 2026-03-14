@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validators</title>
+</head>
+<body>
+    <pre>
+        <input type="text" id="input" required, minlength="7", maxlength="10">
+        <input type="submit" onclick="validate()">
+        <p id="p1"></p>
+    </pre>
+    <script>
+        function validate(){
+                const element = document.getElementById("input");
+                console.log(element.checkValidity());// the method checkValidity will give you true or falls
+                if(element.checkValidity())
+                {
+                    document.getElementById("p1").innerHTML = "OK";
+                }else
+                {
+                    document.getElementById("p1").innerHTML = element.validationMessage;
+                }
+            
+        }
+
+
+    </script>
+</body>
+</html>

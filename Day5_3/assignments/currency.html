@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Currency Converter</title>
+</head>
+ 
+
+<body>
+<div>
+<input type="number" id="amt" placeholder="Enter Amount">
+ 
+
+<label>Choose your current Currency :</label>
+ <select id="currencyTypes" name="currencyTypes" >
+    <option selected> Rupee</option>
+    <option>Euro</option>
+    <option>Dollar</option>
+  </select>
+ 
+
+<label>Choose your Currency Type to convert to :</label>  
+ <select id="converterTypes" name="converterTypes" >
+    <option selected> Euro</option>
+    <option>Rupee </option>
+    <option>Dollar</option>
+ </select>
+ 
+ <button id="btn" onclick="convert()">Convert Currency Amount</button>
+ </div>
+ 
+ <div>
+ <p id="dis"> Currency Amount After Converting</p>
+ </div>
+ 
+ </body>
+ 
+<script type="text/javascript">
+ 
+
+function convert()
+{
+let currentValue = document.getElementById("currencyTypes").value;
+console.log(currentValue);
+ 
+
+let changeType = document.getElementById("converterTypes").value;
+console.log(changeType);
+ 
+
+let amount = document.getElementById("amt").value;
+console.log(amount);
+ 
+
+if(currentValue==changeType){
+console.log("Cannot Convert");
+document.getElementById("dis").innerHTML = "Currency Amount After Converting : Cannot Convert" ;
+ 
+
+}else if(currentValue=="Rupee"&&changeType=="Euro"){
+  let euro = 0.0094;
+  
+  let afterconversion = amount*euro;
+  console.log(afterconversion);
+  document.getElementById("dis").innerHTML = "Currency Amount After Converting :" + afterconversion + " Euro" ;
+}else if(currentValue=="Rupee"&&changeType=="Dollar"){
+  let dollar = 0.011;
+  
+  let afterconversion = amount*dollar;
+  
+  console.log(afterconversion);
+  document.getElementById("dis").innerHTML = "Currency Amount After Converting :" + afterconversion + " Dollar" ;
+  
+  }else if(currentValue=="Euro"&&changeType=="Rupee"){
+  
+let rupee = 106.34;
+ 
+
+let afterconversion = amount*rupee;
+console.log(afterconversion);
+document.getElementById("dis").innerHTML = "Currency Amount After Converting :" + afterconversion + " Rupee" ;
+}else if(currentValue=="Euro"&&changeType=="Dollar"){
+  
+let dollar = 1.16;
+ 
+
+let afterconversion = amount*dollar;
+console.log(afterconversion);
+document.getElementById("dis").innerHTML = "Currency Amount After Converting :" + afterconversion + " Dollar" ;
+}
+else if(currentValue=="Dollar"&&changeType=="Rupee"){
+  
+let rupee = 91.63;
+ 
+
+let afterconversion = amount*rupee;
+console.log(afterconversion);
+document.getElementById("dis").innerHTML = "Currency Amount After Converting :" + afterconversion + " Rupee" ;
+}
+else if(currentValue=="Dollar"&&changeType=="Euro"){
+  
+let euro = 0.86;
+ 
+
+let afterconversion = amount*euro;
+console.log(afterconversion);
+document.getElementById("dis").innerHTML = "Currency Amount After Converting :" + afterconversion + " Euro" ;
+}
+}
+ 
+
+</script>
+</html>

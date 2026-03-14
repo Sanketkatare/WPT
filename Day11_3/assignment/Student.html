@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+<body>
+        <h1>Student</h1>
+        Student id: <input type="number" id="id1">
+        Student Name: <input type="text" id="Sname">
+        <button type="submit" onclick="accept()" id="btn">submit</button><br>
+
+        <table >
+            <thead>
+                <tr>
+                    <th style="border: double;">StudentId</th>
+                    <th style="border: double;">Student Name</th
+                ></tr>   
+            </thead>
+            <tbody id="student-table" style="border: double;">
+                
+            <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+        <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+        <script>
+            function accept(){
+            let Sid = document.getElementById("id1").value;
+            const Sname = document.getElementById("Sname").value;
+            console.log(Sid);
+            console.log(Sname);
+            // btn.addEventListener("click", function(){
+                const data = {
+                "Sid" : Sid,
+                "Sname" : Sname
+            }
+            // jsonText.innerHTML = JSON.stringify(data)
+            // })
+            $("#student-table" ).append(`<tr><td>${data.Sid}</td><td>${data.Sname}</td></tr>`) ;
+            console.log(data);
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra assignment</title>
+</head>
+<body>
+    <div style="border-radius: 2px; background-color: slategray; display: flexbox; align-content: center;">
+        <input type="text" id="i1" class="" name="first_name" placeholder="First Name"> : First Name</input>
+        <input type="text" name="Last_name" id="i2" placeholder="Last Name"> : Last Name
+        <input type="date" style="display: block;">
+        
+    </div>
+    <button onclick="">submit</button>
+    <script>
+        function generate(){
+            let userName = "";
+            First_Name = document.getElementById("i1").value;
+            Last_Name = document.getElementById("i1").value;
+            for(a=0;a<2;a++)
+            {
+                userName += First_Name[a];
+            }
+            for(let a=0;a<2;a++)
+            {
+                userName += Last_Name[a];
+            }
+        }
+    </script>
+</body>
+</html>
