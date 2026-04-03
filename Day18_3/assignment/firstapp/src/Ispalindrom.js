@@ -1,0 +1,34 @@
+// A) create reactproject 
+
+//   1)create folder demoReact 
+//   2)move inside that folder 
+//   cd demoReact
+//   3) npm init -y
+//   4) npx create-react-app  myapp 
+  
+
+// after successful creation of go inside project directory
+
+//  5) npm start ----- to run your react project 
+
+// B) create react function  component name 
+//      IsPalindrome  - which accept data in number format 
+ 
+//  Component should display given number is 
+// Palindrome or not     on Browser 
+
+export default function Ispal(props) {
+    let a = props.num;
+    let rev = 0;
+    let rem;
+    while (a != 0) {
+        rem = a % 10;
+        rev = rev * 10 + rem;
+        a = a / 10;
+    }
+    if (rev === props.num) {
+        console.log("Is planindrom")
+    } else {
+        console.log("not a plaindrom")
+    }
+}

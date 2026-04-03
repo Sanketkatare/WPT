@@ -1,0 +1,79 @@
+<!-- 
+1) create login.html 
+    
+	accept username and password from user 
+
+perform validation for both textfield 
+
+	i) textfield should contain data 
+	ii) length of password should between 8 to 12 characters 
+
+if username == iet and password == iet 
+
+then forward control to Home.html 
+
+2) 
+Make use of predefined call back function 
+
+3) 
+define 2 objects which contain variables 
+
+and add print function inside objects using prototype 
+
+4) create object for student which contains 
+     StudentId
+     StudentName
+     Grade 
+
+convert that data in JSON format  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body align="center">
+    <h1>Login</h1>
+    <form action="home.html" style="display: inline-block; text-align: left; border: 1px solid black; padding: 20px; ">
+        <label for="username">Username: <input type="text" name="username"></label><br><br>
+        <label for="password">Password: <input type="password" name="password"></label><br>
+        <input type="submit" onclick="return validate()" style="display: block; margin: 20px auto;">
+    </form>
+
+    <script>
+        function validate() {
+            let username, password;
+            let a = document.getElementsByName("username").value
+            if (a.trim() == "" || a.length < 2 || a == 0) {
+                alert("Username is required");
+                document.forms[0].username.focus();
+                username = false;
+                if (a != "iet") {
+                    alert("Username is wrong");
+                    document.forms[0].username.focus();
+                    username = false;
+                }
+            }
+            else {
+                username = true;
+            }
+            let b = document.getElementByname("password").value
+            if (b.trim() == "" || b.length < 2 || b != "iet") {
+                alert("Password is wrong");
+                document.forms[0].password.focus();
+                password = false;
+            }
+            else {
+                password = true;
+            }
+            return username && password;
+        }
+ </script>
+
+
+</body>
+
+</html>

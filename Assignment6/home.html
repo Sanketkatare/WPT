@@ -1,0 +1,68 @@
+<!-- 1) create login.html 
+    
+	accept username and password from user 
+
+perform validation for both textfield 
+
+	i) textfield should contain data 
+	ii) length of password should between 8 to 12 characters 
+
+if username == iet and password == iet 
+
+then forward control to Home.html 
+
+2) 
+Make use of predefined call back function 
+
+3) 
+define 2 objects which contain variables 
+
+and add print function inside objects using prototype 
+
+4) create object for student which contains 
+     StudentId
+     StudentName
+     Grade 
+
+convert that data in JSON format  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is home page</h1>
+
+    <script>
+        <!-- used of predifined callback function  -->
+        window.onload = function () {
+            alert("Welcome to home page");
+        }
+
+
+        function addition(a, b) {
+            let result = a + b;
+            return result;
+        }
+        addition.prototype.addition = function() {
+            console.log(result);
+        }
+        let c = new addition();
+        c.addition(10, 20);
+
+        // Create student object
+        const student = {
+            StudentId: 101,
+            StudentName: "John Doe",
+            Grade: "A"
+        };
+
+        // Convert to JSON format
+        const studentJSON = JSON.stringify(student);
+        console.log(studentJSON);
+    </script>
+
+</body>
+</html>

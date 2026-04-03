@@ -1,0 +1,29 @@
+<!-- 3. Write a jQuery program to attach a click and double-click events to all elements. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">Click me!</button>
+    <p id="myParagraph">This is a paragraph.</p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Attach click event to all elements
+            $('*').on('click', function() {
+                console.log('Element clicked:', this.tagName);
+            });
+
+            // Attach double-click event to all elements
+            $('*').on('dblclick', function() {
+                console.log('Element double-clicked:', this.tagName);
+            });
+        });
+    </script>
+
+</body>
+</html>
